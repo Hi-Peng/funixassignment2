@@ -20,14 +20,14 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class hospital extends Fragment {
+public class bus extends Fragment {
     ListView listView;
 
     //Initialize the content of list view, i'm using my own content here
-    String mHospital[] = {"Maeda Hospital", "Yamamoto Hospital", "RSCM Hospital", "Roto Hospital", "Nganjuk Hospital", "Waton Hospital", "Tejo Hospital"};
+    String mBus[] = {"Maeda Transportation", "Yamamoto Transportation", "RSCM Transportation", "Roto Transportation", "Nganjuk Transportation", "Waton Transportation", "Tejo Transportation"};
     String mAddress[] = {"Jalan Pemuda", "Jalan Maeda", "Jalan Hanoi", "Jalan Patimura", "Jalan Laksamana", "Jalan Perumdis", "Jalan Abdul Syukur"};
 
-    public hospital() {
+    public bus() {
         // Required empty public constructor
     }
 
@@ -37,21 +37,21 @@ public class hospital extends Fragment {
         //Adding a view
         View view = inflater.inflate(R.layout.fragment_hotel, container, false);
         listView = view.findViewById(R.id.hotelList);
-        hospital.listAdapter adapter = new hospital.listAdapter(getContext(), mHospital, mAddress);
+        bus.listAdapter adapter = new bus.listAdapter(getContext(), mBus, mAddress);
         listView.setAdapter(adapter);
         return view;
     }
 
     class listAdapter extends ArrayAdapter<String> {
         Context context;
-        String rHotel[];
+        String rBus[];
         String rAddress[];
 
 
         listAdapter(Context c, String title[], String address[]){
             super(c, R.layout.custom_list_view, R.id.judul_gede, title);
             this.context = c;
-            this.rHotel = title;
+            this.rBus = title;
             this.rAddress = address;
         }
 
@@ -65,8 +65,8 @@ public class hospital extends Fragment {
             ImageView icon = (ImageView) customRow.findViewById(R.id.icon);
 
             iAddress.setText(rAddress[position]);
-            iTitle.setText(rHotel[position]);
-            icon.setImageResource(R.drawable.hospital);
+            iTitle.setText(mBus[position]);
+            icon.setImageResource(R.drawable.bus);
 
             return customRow;
         }
