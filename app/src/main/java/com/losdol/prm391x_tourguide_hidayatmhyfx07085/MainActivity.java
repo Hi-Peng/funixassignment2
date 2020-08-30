@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-
+    //Init
     CardView hotelCV, atmCV, hospitalCV, busCV;
     hotel mHotel;
     hospital mHospital;
@@ -27,40 +27,43 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Assigning cardview object to theirs layout id
         hospitalCV = (CardView) findViewById(R.id.hospital_box);
         hotelCV = (CardView) findViewById(R.id.hotel_box);
         atmCV = (CardView) findViewById(R.id.atm_box);
         busCV = (CardView) findViewById(R.id.bus_box);
 
+        //I make on click listener for the card view
         hotelCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mHotel();
+                mHotel(); //Call the fragment
             }
         });
 
         hospitalCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mHospital();
+                mHospital(); //Call the fragment
             }
         });
 
         atmCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAtm();
+                mAtm(); //Call the fragment
             }
         });
 
         busCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mBus();
+                mBus(); //Call the fragment
             }
         });
     }
 
+    //Method to call the fragment
     public void mHotel(){
         mHotel = new hotel();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mHotel);

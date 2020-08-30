@@ -18,7 +18,9 @@ import android.widget.TextView;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * Here is the fragment for the Hospital
+ * This class generated automatically by the IDE generator
+ * Every fragment nearly same, just change some variable
  */
 public class hospital extends Fragment {
     ListView listView;
@@ -35,13 +37,14 @@ public class hospital extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
         //Adding a view
-        View view = inflater.inflate(R.layout.fragment_hotel, container, false);
+        View view = inflater.inflate(R.layout.fragment_layout, container, false);
         listView = view.findViewById(R.id.hotelList);
         hospital.listAdapter adapter = new hospital.listAdapter(getContext(), mHospital, mAddress);
         listView.setAdapter(adapter);
         return view;
     }
 
+    //Here's where I make the custom view for the list view
     class listAdapter extends ArrayAdapter<String> {
         Context context;
         String rHotel[];
@@ -55,6 +58,7 @@ public class hospital extends Fragment {
             this.rAddress = address;
         }
 
+        //Here's where I make the custom view for the list view
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

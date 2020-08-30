@@ -18,12 +18,14 @@ import android.widget.TextView;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * Here is the fragment for the ATM
+ * This class generated automatically by the IDE generator
+ * Every fragment nearly same, just change some variable
  */
 public class atm extends Fragment {
     ListView listView;
 
-    //Initialize the content of list view, i'm using my own content here
+    //Initialize the content of list view, I'm using my own content here
     String mATM[] = {"ATM Mandiri", "Bank Jago", "Bank Siap", "Bank Jago Lagi", "Bang Wagu", "Bank BNI", "Bank Negara"};
     String mAddress[] = {"Jalan Pemuda", "Jalan Maeda", "Jalan Hanoi", "Jalan Patimura", "Jalan Laksamana", "Jalan Perumdis", "Jalan Abdul Syukur"};
 
@@ -31,17 +33,19 @@ public class atm extends Fragment {
         // Required empty public constructor
     }
 
+    //Here's where the fragment will showed
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
         //Adding a view
-        View view = inflater.inflate(R.layout.fragment_hotel, container, false);
+        View view = inflater.inflate(R.layout.fragment_layout, container, false);
         listView = view.findViewById(R.id.hotelList);
         atm.listAdapter adapter = new atm.listAdapter(getContext(), mATM, mAddress);
         listView.setAdapter(adapter);
         return view;
     }
 
+    //Here's where I make the custom view for the list view
     class listAdapter extends ArrayAdapter<String> {
         Context context;
         String rAtm[];
@@ -55,6 +59,7 @@ public class atm extends Fragment {
             this.rAddress = address;
         }
 
+        //Here's where I make the custom view for the list view
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

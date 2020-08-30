@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hotel">
+
+    <!-- Because it was transparent, I use dummy layout for backgroud -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F1F1F1"/>
+
+    <!-- The list view is over here. I just realize that I don't have to
+         use multiple layout for each fragment, instead I can use a layout
+         for multiple fragment class
+     -->
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/hotelList"/>
+
+
+
+</FrameLayout>
