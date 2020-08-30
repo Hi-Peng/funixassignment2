@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tour Guide App</string>
+
+    <!-- UI that not really important-->
+    <string name="location">%1$s, Indonesia</string>
+    <string name="atmString">ATM</string>
+    <string name="hotel">Hotel</string>
+    <string name="bus">Bus</string>
+    <string name="hospital">Hospital</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

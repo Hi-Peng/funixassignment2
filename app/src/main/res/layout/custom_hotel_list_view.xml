@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/hotel_icon"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@color/ijoRoyo"
+        android:padding="18dp"
+        android:id="@+id/logoHotel">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Judul Gede"
+            android:textColor="@color/rodoPeteng"
+            android:id="@+id/judul_gede"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Isine teks e manut ae ndasku wis mobal"
+            android:textColor="@color/rodoPeteng"
+            android:id="@+id/isi"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/idn_gendero"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:layout_gravity="center"
+            android:textSize="@dimen/fontMainJudul"
+            android:textAlignment="center"/>
+
+        <GridLayout
+            android:columnCount="2"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/hotel_box"
+                app:cardCornerRadius="5dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:padding="5dp"
+                app:cardBackgroundColor="@color/rodoPeteng">
+
+                <LinearLayout
+                    android:id="@+id/buttonHotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/hotel_icon"/>
+                    <TextView
+                        android:layout_marginTop="-20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:text="@string/hotel"
+                        android:clickable="false"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- icon from https://www.flaticon.com/free-icon/hospital_746832 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/hospital_box"
+                app:cardCornerRadius="5dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:padding="5dp"
+                app:cardBackgroundColor="@color/rodoPeteng">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleY="0.6"
+                        android:scaleX="0.6"
+                        android:src="@drawable/hospital"/>
+                    <TextView
+                        android:layout_marginTop="-20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:text="Hospital"
+                        android:clickable="false"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- icon from https://www.flaticon.com/free-icon/atm_891165?term=atm&page=1&position=5-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/atm_box"
+                app:cardCornerRadius="5dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:padding="5dp"
+                app:cardBackgroundColor="@color/rodoPeteng">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/atm"
+                        android:scaleY="0.5"
+                        android:scaleX="0.5"/>
+                    <TextView
+                        android:layout_marginTop="-20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:text="ATM"
+                        android:clickable="false"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- icon from https://www.flaticon.com/free-icon/bus_825946?term=bus&page=1&position=25-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bus_box"
+                app:cardCornerRadius="5dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:padding="5dp"
+                app:cardBackgroundColor="@color/rodoPeteng">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bus"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"/>
+                    <TextView
+                        android:layout_marginTop="-20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:text="Bus"
+                        android:clickable="false"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container"/>
+
+</FrameLayout>
