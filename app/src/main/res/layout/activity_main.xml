@@ -75,6 +75,8 @@
 
             <!-- icon from https://www.flaticon.com/free-icon/hospital_746832 -->
             <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:focusable="true"
                 android:id="@+id/hospital_box"
                 app:cardCornerRadius="5dp"
                 android:layout_width="0dp"
